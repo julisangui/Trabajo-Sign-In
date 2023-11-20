@@ -1,171 +1,156 @@
-/*etiqueta universal*/
-
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
-
-/*LADO IZQUIERDO DE LA PAGINA*/
-
-/*titulo*/
 
 .bienvenido{
-    margin-left: 25%;
-    margin-top: 15%;
     font-size: 35px;
+    margin-bottom: 10px;
 }
-
-/*subtitulo*/
 
 .subtitulo{
     color: rgb(150, 150, 150);
-    margin-left: 25%;
-    margin-bottom: 20px;
     font-size: 15px;
+    margin-bottom: 30px;
 }
-
-/*diseño del div "formulario"*/
 
 .formulario{
-    float: left;
-    width: 50%;
-    height: 100vh;    
-}
-
-/*formulario*/
-
-form{
-    font-size: 12px;
     display: flex;
     flex-direction: column;
-    margin: auto;
+    justify-content: center;
+    float: left;
+    height: 100vh;
     width: 50%;
 }
 
-/*diseño de los input email y password*/
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 12px;
+    gap: 10px;
+}
 
 input[type="email"], input[type="password"]{
     border-radius: 8px;
     border-color: rgb(0,0,0,0.2);
     padding: 10px;
-    margin-bottom: 5px;
 }
-
-/*separacion de los label*/
-
-label{
-    margin-bottom: 5px
-}
-
-/*diseño del div "opciones"*/
 
 .opciones{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
     font-size: 12px;
 }
 
-/*posicion del texto "remember for 30 days"*/
-
-.recordar .remember{
-    position: absolute;
-    margin-left: 5px
+.check{
+    cursor: pointer;
 }
 
-/*diseño de los links*/
+.recordar label{
+    position: relative;
+    bottom: 2px;
+}
 
 a{
     color: black;
     text-decoration: none;
 }
+
 .forgot:hover{
     text-decoration: underline;
 }
+
 .registrarse:hover{
     text-decoration: underline;
 }
 
-/*diseño del boton "Sign in"*/
-
 .ingresar{
-    background-color: black;
-    color: white;
-    border-color: rgb(0,0,0,0);
+    background-color: rgb(255, 255, 255);
+    color: #010101;
+    border-color: rgb(0,0,0,0.2);
     border-radius: 8px;
     padding: 10px;
-    margin-bottom: 10px;
     font-size: 12px;
 }
 
-/*diseño del boton "Sign in with Google"*/
+.ingresar:hover{
+    cursor: pointer;
+    background-color: #010101;
+    color: #ffffff;
+    border-color: rgb(0,0,0,0.2);
+}
 
 .google{
-    background-color: white;
-    border-radius: 8px;
-    border-color: rgb(0,0,0,0.2);
-    padding: 8px; 
-    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    border-color: rgb(0,0,0,0.2);
+    padding: 10px;
+    font-size: 12px;
 }
+
 .icono{
     width: 20px;
     padding-right: 5px;
 }
 
-/*diseño del div "nuevo"*/
+.google:hover{
+    cursor: pointer;
+    background-color: #010101;
+    border-color: rgb(0,0,0,0.2);
+}
+
+.google:hover a{
+    color: #ffffff;
+}
 
 .nuevo{
     display: flex;
     font-size: 12px;
+    gap: 15px;
     margin: 0 auto;
 }
+
 p{
     color: rgb(150, 150, 150);
     font-size: 12px;
 }
-.registrarse{
-    margin-left: 5px;    
-}
 
-/*diseño del raton*/
-
-.ingresar:hover{
-    cursor: pointer;
-}
-.google:hover{
-    cursor: pointer;
+@media (max-width: 1050px){
+    .opciones, .nuevo{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 /*LADO DERECHO DE LA PAGINA*/
 
-/*imagen de fondo del lado derecho de la pagina*/
 .imagen{
     background-image: url("setup.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    float: right;
-    width: 50%;
     height: 100vh;
+    width: 50%;
     display: flex;
     align-items: flex-end;
 }
-
-/*contenedor*/
 
 .contenedor{
     background: #fafafa25;
     backdrop-filter: blur(0.4rem);
     margin: 0 auto;
-    width: 590px;
-    height: 300px;
+    width: 90%;
+    height: auto;
     margin-bottom: 3%;
 }
-
-/*titulo, subtitulo & texto dentro del contenedor*/
 
 .titulo-contenedor{
     color: white;
@@ -205,24 +190,56 @@ p{
     margin-right: 25px;
 }
 
-/*iconos dentro del contenedor*/
-
 i{
     color: white;
 }
+
 .nombre-estrellas{
     display: flex;
     justify-content: space-between;
 }
+
 .estrellas{
-    margin-top: 40px;
+    margin-top: 35px;
     margin-right: 25px;
 }
+
 .fin-contenedor{
     display: flex;
     justify-content: space-between;
 }
-.circulos{
+
+.flechas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 40px;
+    gap: 10px;
+    margin-bottom: 25px;
     margin-right: 25px;
+}
+
+.flechas i:hover{
+    cursor: pointer;
+    color: aqua;
+}
+
+@media (max-width: 768px){
+
+    .subtitulo-contenedor{
+        font-size: 25px;
+    }
+
+    .formulario{
+        width: 100%;
+    }
+
+    .imagen{
+        width: 100%;
+    }
+
+    .sign-in{
+        display: flex;
+        flex-direction: column;
+    }
 }
