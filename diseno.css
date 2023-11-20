@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 
+
 /*LADO IZQUIERDO DE LA PAGINA*/
+
 
 .bienvenido{
     font-size: 35px;
@@ -132,10 +134,26 @@ p{
     font-size: 12px;
 }
 
-@media (max-width: 520px){
+@media (max-width: 1024px){
     .opciones{
         flex-direction: column;
         gap: 10px;
+    }
+    
+    .nuevo{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px){
+    .opciones, .nuevo{
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 520px){
+    .opciones{
+        flex-direction: column;
     }
 }
 
